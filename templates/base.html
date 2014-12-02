@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+{% block head %}
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="/static/css/main.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="/static/js/html5.js"></script>
+    <![endif]-->
+{% endblock %}
+  </head>
+
+  <body>
+<h1><a href="/">Just a test</a></h1>
+
+{% block main %}{% endblock %}
+
+{% block creativecommons %}
+<div class="creative-commons">
+<a href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="/static/img/by-sa.png" alt="Creative Commons" /></a>
+</div>
+{% endblock %}
+
+  </body>
+</html>
