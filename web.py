@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import os
-from flask import Flask, request, session, g, redirect, url_for, render_template
+import json
+from flask import Flask, request, session, g, redirect, url_for, render_template, Response
 
 
 app = Flask(__name__)
@@ -16,9 +17,7 @@ def index():
 
 @app.route("/dummy-api")
 def api():
-    response = app.make_response('{foo: "bar"}')
-    response.headers["Content-Type"] = "application/json"
-    return response
+    return Response(json.dumps({"list-data": ["a", "b", "c", "d"]}), mimetype="application/json")
 
 
 if __name__ == "__main__":
