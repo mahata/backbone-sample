@@ -2,7 +2,17 @@
 
 {% block main %}
 
-Hello, world!
+<script type="text/template" id="entry-template">
+    <div class="entry-title">Title: <%- title %></div>
+</script>
+
+<div id="entry-view">
+    <form id="submit">
+        <input id="submit-button" type="submit" value="Click Me!" />
+    </form>
+</div>
+
+<div id="entry-list"></div>
 
 {{ var.hey }}
 
